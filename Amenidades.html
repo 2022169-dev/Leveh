@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amenidades - Levéh</title>
+
+  <link rel="icon" href="IPagleveg/Logos/Logo_sin_fondo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="IPagleveg/Logos/Logo_sin_fondo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="IPagleveg/Logos/apple-touch-icon.png">
+  <link rel="manifest" href="IPagleveg/Logos/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0a0a0a;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --line-gray: #c0c0c0;
+      --brand: #111827; 
+      --accent: #0ea5e9; 
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0b0c;
+        --fg: #fafafa;
+        --muted: #9ca3af;
+        --line: #1f2937;
+        --line-gray: #555555;
+        --brand: #e5e7eb;
+      }
+    }
+
+    html, body { margin:0; padding:0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Noto Sans"; line-height:1.5; }
+    .container { width: min(1120px, 92%); margin:0 auto; }
+
+    .nav { position: sticky; top:0; z-index:50; backdrop-filter: saturate(180%) blur(12px); background: color-mix(in oklab, var(--bg) 80%, transparent); border-bottom:1px solid var(--line);}
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:56px; }
+    .brand { display:inline-flex; align-items:center; gap:8px; font-weight:600; letter-spacing:0.2px; }
+    .nav-links a { text-decoration:none; color:inherit; opacity:0.86; font-weight:500; }
+    .nav-links a:hover { opacity:1; }
+
+    .hero { padding:48px 0 32px; text-align:center; }
+    .kicker { font-size:14px; letter-spacing:0.2em; text-transform:uppercase; color: var(--muted);}
+    .title { font-size: clamp(36px, 6vw, 64px); font-weight:700; margin:8px 0 12px; letter-spacing:-0.02em;}
+    .subtitle { font-size:clamp(16px,2.4vw,20px); color: var(--muted); margin-bottom:28px;}
+
+  
+    .divider { height:2px; background: var(--line); width:60%; margin:16px auto; border-radius:2px; }
+    .divider.gray { background: var(--line-gray); width:60%; margin:24px auto; }
+
+    .section { margin:64px auto; text-align:center; max-width:1120px; }
+    .section h2 { font-size:32px; font-weight:700; margin-bottom:16px; }
+    .section p { color: var(--muted); font-size:18px; max-width:800px; margin:0 auto 32px; }
+
+    .image-card {
+      background:#111827;
+      overflow:hidden;
+      box-shadow:0 8px 32px rgba(0,0,0,0.12);
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor:pointer;
+      width: 100%;
+      max-width:400px;
+      margin:0 auto 24px auto;
+      border-radius: 16px;
+    }
+
+    .image-card img { width:100%; height:300px; object-fit:cover; display:block; }
+    .image-card:hover { transform: translateY(-4px); box-shadow:0 16px 48px rgba(0,0,0,0.18); }
+
+    @media(max-width:960px){ .image-card{ max-width:100%; } }
+
+
+    #lightbox { 
+      position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9);
+      display:none; align-items:center; justify-content:center; z-index:9999; 
+    }
+    #lightbox img { max-width:90%; max-height:90%; border-radius:12px; object-fit:contain; }
+    #lightbox.show { display:flex; }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Levéh, inicio" style="text-decoration:none;">
+        <img src="IPagleveg/Logos/apple-touch-icon.png" alt="Logo Levéh" style="height:28px; width:auto; border-radius:8px;">
+        <span style="font-family:'Times New Roman', Times, serif; font-size:20px; color:#ffffff;">LEVÉH RESIDENCES</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" style="padding:8px 14px; border-radius:999px; border:1px solid #ffffff; background:#ffffff; color:#000000; font-size:14px; text-decoration:none; font-weight:500;">Volver al inicio</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <header class="hero container">
+    <p class="kicker">Levéh presenta</p>
+    <h1 class="title">Amenidades Exclusivas</h1>
+    <p class="subtitle">Disfruta de espacios diseñados para el confort, entretenimiento y bienestar de toda la familia.</p>
+  </header>
+
+  <div class="divider"></div> 
+
+
+  <section class="section container">
+    <h2>Conjunto</h2>
+    <p>Descubre las amenidades del conjunto residencial, pensadas para ofrecer seguridad y estilo.</p>
+    <div class="image-card">
+      <img src="IPagleveg/amenidades planos/Conjunto/conjunto.jpeg" alt="Amenidades del Conjunto">
+    </div>
+  </section>
+
+  <div class="divider gray"></div>
+
+
+  <section class="section container">
+    <h2>Amenidades de las propiedades</h2>
+    <p>Cada propiedad cuenta con Administración, Co-Working, Gym & Recepción.</p>
+    <div class="image-card">
+      <img src="IPagleveg/amenidades planos/AmenidadGym/amenidad gym.jpeg" alt="Amenidades de la propiedad">
+    </div>
+  </section>
+
+  <div class="divider gray"></div>
+
+
+  <section class="section container">
+    <h2>Amenidades</h2>
+    <p>Espacios pensados para que disfrutes la mejor calidad de vida.</p>
+    <div class="image-card">
+      <img src="IPagleveg/amenidades planos/De los 3/amen de los 3.jpeg" alt="Amenidades generales">
+    </div>
+  </section>
+
+ 
+  <div id="lightbox"><img src="" alt="Ampliado"></div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const imgs = document.querySelectorAll('.image-card img');
+
+    imgs.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('show');
+      });
+    });
+
+    lightbox.addEventListener('click', e => {
+      if(e.target !== lightboxImg) lightbox.classList.remove('show');
+    });
+  </script>
+
+</body>
+</html>
